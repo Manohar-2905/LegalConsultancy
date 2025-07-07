@@ -1,0 +1,8 @@
+.zoom-datepicker .react-datepicker {
+  transform: scale(1.2); /* Increase calendar size */
+  transform-origin: top left;
+}
+
+.react-datepicker{
+  display: inline-flex;
+}
