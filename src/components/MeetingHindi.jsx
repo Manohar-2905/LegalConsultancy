@@ -10,10 +10,12 @@ function MeetingHindi() {
   const [status, setStatus] = useState('');
 
   const formatDate = (date) => {
-    return date ? new Intl.DateTimeFormat('en-US', {
-      dateStyle: 'full',
-      timeStyle: 'short',
-    }).format(date) : '';
+    return date
+      ? new Intl.DateTimeFormat('en-US', {
+          dateStyle: 'full',
+          timeStyle: 'short',
+        }).format(date)
+      : '';
   };
 
   const sendEmail = (e) => {
@@ -28,35 +30,37 @@ function MeetingHindi() {
       )
       .then(
         () => {
-          setStatus('✅ Appointment request sent successfully!');
+          setStatus('✅ नियुक्ति अनुरोध सफलतापूर्वक भेजा गया!');
           form.current.reset();
           setSelectedDate(null);
         },
         (error) => {
           console.error(error.text);
-          setStatus('❌ Failed to send appointment. Please try again.');
+          setStatus('❌ नियुक्ति भेजने में विफल। कृपया पुनः प्रयास करें।');
         }
       );
   };
 
   return (
     <div className="max-w-4xl mx-auto p-6 mt-20">
+      {/* Header */}
       <div className="text-center mb-8">
         <h3 className="text-green-600 font-semibold uppercase text-sm">बैठक अनुरोध प्रपत्र</h3>
-        <h2 className="text-2xl font-bold text-gray-900 mt-2">हम आप के साथ बैठक करने की कामना करते हैं</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-2">हम आपसे मिलने के लिए तत्पर हैं</h2>
       </div>
 
+      {/* Date Picker */}
       <div className="mb-20">
         <label className="block font-semibold mb-2 text-base text-gray-800 text-center">
           दिनांक और समय चुनें <span className="text-red-500">*</span>
         </label>
         <div className="flex justify-center">
-          <div className="zoom-datepicker">
+          <div className="zoom-datepicker-wrapper">
             <DatePicker
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
               className="w-full border border-gray-300 rounded px-3 py-2 text-base"
-              placeholderText="Click to select a date"
+              placeholderText="क्लिक करके दिनांक चुनें"
               minDate={new Date()}
               showTimeSelect
               dateFormat="Pp"
@@ -66,11 +70,14 @@ function MeetingHindi() {
         </div>
       </div>
 
+      {/* Form */}
       <form ref={form} onSubmit={sendEmail} className="space-y-6 text-base text-gray-800">
         <input type="hidden" name="time" value={formatDate(selectedDate)} />
 
         <div>
-          <label className="block font-semibold mb-1">Name <span className="text-red-500">*</span></label>
+          <label className="block font-semibold mb-1">
+            नाम <span className="text-red-500">*</span>
+          </label>
           <input
             type="text"
             name="name"
@@ -81,7 +88,9 @@ function MeetingHindi() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-1">मेल पता <span className="text-red-500">*</span></label>
+          <label className="block font-semibold mb-1">
+            ईमेल पता <span className="text-red-500">*</span>
+          </label>
           <input
             type="email"
             name="email"
@@ -92,7 +101,9 @@ function MeetingHindi() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-1">फ़ोन नंबर <span className="text-red-500">*</span></label>
+          <label className="block font-semibold mb-1">
+            फ़ोन नंबर <span className="text-red-500">*</span>
+          </label>
           <input
             type="tel"
             name="Phone_number"
@@ -103,7 +114,9 @@ function MeetingHindi() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-2">आप किस सेवा या सेवाओं में रुचि रखते हैं?</label>
+          <label className="block font-semibold mb-2">
+            आप किस सेवा या सेवाओं में रुचि रखते हैं?
+          </label>
           <div className="space-y-1 ml-1">
             <label className="block text-base">
               <input type="checkbox" className="mr-2 scale-110" />
@@ -134,11 +147,15 @@ function MeetingHindi() {
           type="submit"
           className="w-full bg-green-600 text-white py-3 rounded text-base font-semibold hover:bg-green-700 transition"
         >
-          जमा करना
+          जमा करें
         </button>
 
         {status && (
-          <p className={`text-center mt-4 font-semibold ${status.includes('✅') ? 'text-green-600' : 'text-red-500'}`}>
+          <p
+            className={`text-center mt-4 font-semibold ${
+              status.includes('✅') ? 'text-green-600' : 'text-red-500'
+            }`}
+          >
             {status}
           </p>
         )}

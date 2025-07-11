@@ -26,7 +26,7 @@ function AboutHindi() {
         <div className="text-xl text-[#32aa27] font-semibold">
           संस्थापक के बारे में
         </div>
-        <div className="text-gray-700 leading-relaxed max-w-2xl">
+        <div className="text-justify text-gray-700 leading-relaxed max-w-2xl">
           फर्म के सह-संस्थापक राणा राहुल प्रताप बीमा कानून, उपभोक्ता विवाद,
           कामगार मुआवज़ा और आपराधिक और सिविल मुकदमेबाजी दोनों में एक विशिष्ट
           पृष्ठभूमि के साथ 23 वर्षों से अधिक का कानूनी अनुभव लेकर आए हैं। बार

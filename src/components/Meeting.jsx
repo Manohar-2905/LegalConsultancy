@@ -10,10 +10,12 @@ function Meeting() {
   const [status, setStatus] = useState('');
 
   const formatDate = (date) => {
-    return date ? new Intl.DateTimeFormat('en-US', {
-      dateStyle: 'full',
-      timeStyle: 'short',
-    }).format(date) : '';
+    return date
+      ? new Intl.DateTimeFormat('en-US', {
+          dateStyle: 'full',
+          timeStyle: 'short',
+        }).format(date)
+      : '';
   };
 
   const sendEmail = (e) => {
@@ -43,8 +45,12 @@ function Meeting() {
     <div className="max-w-4xl mx-auto p-6 mt-20">
       {/* Header */}
       <div className="text-center mb-8">
-        <h3 className="text-green-600 font-semibold uppercase text-sm">Meeting Request Form</h3>
-        <h2 className="text-2xl font-bold text-gray-900 mt-2">We look forward to meeting with you</h2>
+        <h3 className="text-green-600 font-semibold uppercase text-sm">
+          Meeting Request Form
+        </h3>
+        <h2 className="text-2xl font-bold text-gray-900 mt-2">
+          We look forward to meeting with you
+        </h2>
       </div>
 
       {/* Date Picker */}
@@ -53,7 +59,7 @@ function Meeting() {
           Select a date and time <span className="text-red-500">*</span>
         </label>
         <div className="flex justify-center">
-          <div className="zoom-datepicker">
+          <div className="zoom-datepicker-wrapper">
             <DatePicker
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
@@ -74,7 +80,9 @@ function Meeting() {
         <input type="hidden" name="time" value={formatDate(selectedDate)} />
 
         <div>
-          <label className="block font-semibold mb-1">Name <span className="text-red-500">*</span></label>
+          <label className="block font-semibold mb-1">
+            Name <span className="text-red-500">*</span>
+          </label>
           <input
             type="text"
             name="name"
@@ -85,7 +93,9 @@ function Meeting() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-1">Email address <span className="text-red-500">*</span></label>
+          <label className="block font-semibold mb-1">
+            Email address <span className="text-red-500">*</span>
+          </label>
           <input
             type="email"
             name="email"
@@ -96,7 +106,9 @@ function Meeting() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-1">Phone number <span className="text-red-500">*</span></label>
+          <label className="block font-semibold mb-1">
+            Phone number <span className="text-red-500">*</span>
+          </label>
           <input
             type="tel"
             name="Phone_number"
@@ -107,7 +119,9 @@ function Meeting() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-2">Which service or services are you interested in?</label>
+          <label className="block font-semibold mb-2">
+            Which service or services are you interested in?
+          </label>
           <div className="space-y-1 ml-1">
             <label className="block text-base">
               <input type="checkbox" className="mr-2 scale-110" />
@@ -142,7 +156,11 @@ function Meeting() {
         </button>
 
         {status && (
-          <p className={`text-center mt-4 font-semibold ${status.includes('✅') ? 'text-green-600' : 'text-red-500'}`}>
+          <p
+            className={`text-center mt-4 font-semibold ${
+              status.includes('✅') ? 'text-green-600' : 'text-red-500'
+            }`}
+          >
             {status}
           </p>
         )}

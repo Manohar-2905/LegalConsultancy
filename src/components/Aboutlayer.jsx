@@ -12,7 +12,7 @@ function About() {
         <div className="text-lg font-medium">
           Comprehensive legal & insurance solutions
         </div>
-        <div className="text-gray-700 leading-relaxed space-y-4 max-w-prose">
+        <div className="text-justify text-gray-700 leading-relaxed space-y-4 max-w-prose">
           <p>
             At R&A Legal and Insurance Consultancy, we deliver focused legal and insurance solutions exclusively for the healthcare sector. Serving doctors, hospitals, clinics, and diagnostic centres across India, we specialize in managing the legal complexities that come with modern medical practice.
           </p>

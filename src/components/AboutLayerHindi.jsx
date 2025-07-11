@@ -12,7 +12,7 @@ function AboutLayerHindi() {
               <div className="text-lg font-medium">
                 व्यापक कानूनी और बीमा समाधान
               </div>
-              <div className="text-gray-700 leading-relaxed space-y-4 max-w-prose">
+              <div className= "text-justify text-gray-700 leading-relaxed space-y-4 max-w-prose">
                 <p>
                   आरएंडए लीगल एंड इंश्योरेंस कंसल्टेंसी में, हम विशेष रूप से स्वास्थ्य सेवा क्षेत्र के लिए केंद्रित कानूनी और बीमा समाधान प्रदान करते हैं। भारत भर में डॉक्टरों, अस्पतालों, क्लीनिकों और डायग्नोस्टिक केंद्रों की सेवा करते हुए, हम आधुनिक चिकित्सा पद्धति के साथ आने वाली कानूनी जटिलताओं के प्रबंधन में विशेषज्ञ हैं।
                 </p>

@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 function LetsTalkHindi() {
   return (
     <div>
-      <div className="bg-[#2b6ba2] py-7 px-6 sm:px-10 md:px-20 flex flex-row items-center justify-center text-white text-center gap-x-24">
+      <div className="mt-10 md:mt-10 bg-[#2b6ba2] py-7 px-6 sm:px-10 md:px-20 flex flex-row items-center justify-center text-white text-center gap-x-24">
             {/* Text Section */}
             <div>
               <h2 className="text-3xl font-bold mb-3">चलो बात करते हैं</h2>

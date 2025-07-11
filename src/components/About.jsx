@@ -26,7 +26,7 @@ function Aboutlayer() {
         <div className="text-xl text-[#32aa27] font-semibold">
           About Founder
         </div>
-        <div className="text-gray-700 leading-relaxed max-w-2xl">
+        <div className=" text-justify text-gray-700 leading-relaxed max-w-2xl">
           Rana Rahul Pratap, co-founder of the firm, brings over 23 years of
           legal experience with a distinguished background in insurance law,
           consumer disputes, workman compensation, and both criminal and civil
