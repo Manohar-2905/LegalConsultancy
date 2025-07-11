@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import logo from '../images/BrandLogo.png'; // Adjust the path if needed
+import logo from '../images/BrandLogo.png'; // Adjust if needed
 
 const Navbar = ({ language, setLanguage }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -32,7 +32,6 @@ const Navbar = ({ language, setLanguage }) => {
 
   const text = content[language];
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -45,7 +44,7 @@ const Navbar = ({ language, setLanguage }) => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-40 bg-blue-950 shadow-md p-4">
-      {/* Hamburger for mobile */}
+      {/* Hamburger Icon (Mobile) */}
       <div className="absolute top-4 right-4 md:hidden">
         <button
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
@@ -57,13 +56,12 @@ const Navbar = ({ language, setLanguage }) => {
 
       {/* Navbar Content */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
-        {/* Brand Logo and Name */}
+        {/* Logo and Brand Name */}
         <div className="flex items-center gap-4 pl-4">
           <img src={logo} alt="Logo" className="h-12 w-auto object-contain rounded" />
           <div className="text-white font-bold text-lg sm:text-xl md:text-2xl leading-tight">
             <div className="block md:hidden">
               <div>R&A Legal and Insurance</div>
-              
               <div>Consultancy</div>
             </div>
             <div className="hidden md:block">R&A Legal and Insurance Consultancy</div>
@@ -72,12 +70,7 @@ const Navbar = ({ language, setLanguage }) => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6 mt-4 md:mt-0">
-          <HashLink
-            smooth
-            to="/"
-            onClick={() => setDropdownOpen(false)}
-            className="text-white hover:text-gray-200"
-          >
+          <HashLink smooth to="/#home" className="text-white hover:text-gray-200">
             {text.home}
           </HashLink>
 
@@ -114,7 +107,6 @@ const Navbar = ({ language, setLanguage }) => {
           <HashLink
             smooth
             to="/#contact"
-            onClick={() => setDropdownOpen(false)}
             className="bg-blue-950 text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-600 hover:border-blue-600 transition"
           >
             {text.contact}
@@ -134,42 +126,37 @@ const Navbar = ({ language, setLanguage }) => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="w-full mt-4 flex flex-col space-y-2 md:hidden">
-            <HashLink smooth to="/" onClick={() => setDropdownOpen(false)} className="text-white hover:text-gray-200">
+            <HashLink
+              smooth
+              to="/#home"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white hover:text-gray-200"
+            >
               {text.home}
             </HashLink>
 
-            <button
-              onClick={() => setDropdownOpen(!isDropdownOpen)}
-              className="text-white text-left focus:outline-none"
+            {/* Direct Links (No Dropdown) */}
+            <HashLink
+              smooth
+              to="/#About"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white hover:text-gray-200"
             >
-              {text.more} ▾
-            </button>
-
-            {isDropdownOpen && (
-              <div className="bg-white border rounded shadow-md z-10 w-full">
-                <HashLink
-                  smooth
-                  to="/#About"
-                  onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >
-                  {text.about}
-                </HashLink>
-                <HashLink
-                  smooth
-                  to="/#Serv"
-                  onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >
-                  {text.services}
-                </HashLink>
-              </div>
-            )}
+              {text.about}
+            </HashLink>
+            <HashLink
+              smooth
+              to="/#Serv"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white hover:text-gray-200"
+            >
+              {text.services}
+            </HashLink>
 
             <HashLink
               smooth
               to="/#contact"
-              onClick={() => setDropdownOpen(false)}
+              onClick={() => setMobileMenuOpen(false)}
               className="bg-blue-950 text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-600 hover:border-blue-600 transition"
             >
               {text.contact}
@@ -178,7 +165,7 @@ const Navbar = ({ language, setLanguage }) => {
             <button
               onClick={() => {
                 toggleLanguage();
-                setDropdownOpen(false);
+                setMobileMenuOpen(false);
               }}
               className="mt-2 bg-white text-blue-950 px-4 py-2 rounded hover:bg-gray-100 transition font-semibold"
             >

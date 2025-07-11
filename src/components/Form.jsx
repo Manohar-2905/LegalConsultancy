@@ -149,13 +149,13 @@ function Form() {
           <div>
             <h3 className="text-2xl font-bold mb-2">Hours</h3>
             <ul className="text-gray-700 space-y-1 text-lg">
-              <li>Monday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
-              <li>Tuesday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
-              <li>Wednesday &nbsp;9:00am – 10:00pm</li>
-              <li>Thursday &nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
-              <li>Friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
-              <li>Saturday &nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 06:00pm</li>
-              <li>Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 12:00pm</li>
+              <li>Monday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
+              <li>Tuesday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
+              <li>Wednesday &nbsp;&nbsp;9:00am – 10:00pm</li>
+              <li>Thursday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
+              <li>Friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 10:00pm</li>
+              <li>Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 06:00pm</li>
+              <li>Sunday    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 12:00pm</li>
             </ul>
           </div>
         </div>
