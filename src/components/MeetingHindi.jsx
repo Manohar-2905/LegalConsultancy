@@ -23,10 +23,10 @@ function MeetingHindi() {
 
     emailjs
       .sendForm(
-        'service_5elv15h',
-        'template_smsosid',
+        'service_2m7s75n',
+        'template_znv4xyj',
         form.current,
-        'RH6YWYkHYjW6Ww-Is'
+        '5ASaINTy6NBl0OOqk'
       )
       .then(
         () => {

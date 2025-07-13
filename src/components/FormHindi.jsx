@@ -10,10 +10,10 @@ function FormHindi() {
 
     emailjs
       .sendForm(
-        'service_5elv15h',     // Replace with your actual EmailJS service ID
-        'template_rycojub',    // Replace with your actual EmailJS template ID
+        'service_223jb25',     // Replace with your actual EmailJS service ID
+        'template_739hehd',    // Replace with your actual EmailJS template ID
         form.current,
-        'RH6YWYkHYjW6Ww-Is'      // Replace with your actual EmailJS public key
+        'EoPnegTDT5w_46NqZ'         // Replace with your actual EmailJS public key
       )
       .then(
         (result) => {

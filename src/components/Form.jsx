@@ -11,10 +11,10 @@ function Form() {
 
     emailjs
       .sendForm(
-        'service_5elv15h',     // Replace with your actual EmailJS service ID
-        'template_rycojub',    // Replace with your actual EmailJS template ID
+        'service_223jb25',     // Replace with your actual EmailJS service ID
+        'template_739hehd',    // Replace with your actual EmailJS template ID
         form.current,
-        'RH6YWYkHYjW6Ww-Is'      // Replace with your actual EmailJS public key
+        'EoPnegTDT5w_46NqZ'      // Replace with your actual EmailJS public key
       )
       .then(
         (result) => {
@@ -127,6 +127,17 @@ function Form() {
                 className="hover:text-blue-600 transition-colors duration-200 underline"
               >
                 ra.legalconsult@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-700 text-lg">
+              <FaEnvelope />
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=Contact@ralegal.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 transition-colors duration-200 underline"
+              >
+                Contact@ralegal.in
               </a>
             </div>
           </div>

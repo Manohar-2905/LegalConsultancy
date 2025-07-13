@@ -34,7 +34,7 @@ function Card1Hindi() {
           </p>
           <Link
             to="/Meeting"
-            className="text-blue-400 underline hover:text-blue-800 transition-colors duration-200 text-base"
+            className="bg-[#155E95] hover:bg-[#0e3f6c] text-white font-light py-1 px-2 rounded-4xl cursor-pointer text-sm sm:text-base transition"
           >
             नियुक्ति की सूची बनाएं
           </Link>
