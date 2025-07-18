@@ -132,12 +132,12 @@ function Form() {
             <div className="flex items-center space-x-2 text-gray-700 text-lg">
               <FaEnvelope />
               <a
-                href="https://mail.google.com/mail/?view=cm&to=Contact@ralegal.in"
+                href="https://mail.google.com/mail/?view=cm&to=contact@ralegal.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-600 transition-colors duration-200 underline"
               >
-                Contact@ralegal.in
+                contact@ralegal.in
               </a>
             </div>
           </div>
